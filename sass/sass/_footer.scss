@@ -1,0 +1,157 @@
+footer {
+    @include box-sizing(border-box);
+    @include clearfix;
+    text-align: left;
+    font-size: 0.9em;
+    padding: 1em 0;
+
+    background: $primaryColor;
+
+    position: relative;
+    &:before{
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        background: #fff;
+        bottom: 0;
+    }
+
+    .container {
+        @include gutter;
+        >div {
+            // padding-bottom: 1em;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $primaryColor;
+        &:hover,
+        &:focus {
+            color: darken($primaryColor, 10);
+        }
+    }
+    .footer_logo {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        @include gutter();
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .footer_info {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+        @include gutter();
+        color: #fff;
+    }
+    // .footer_icon {
+    //     @include make-xs-column(12);
+    //     @include make-sm-column(3);
+    //     @include make-md-column(3);
+    //     @include make-lg-column(3);
+    //     @include gutter();
+    // }
+
+    // 版權連結
+    .footer_link {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12);
+        @include make-lg-column(12);
+        @include gutter();
+
+        background: $lightColor;
+        color: #fff;
+        padding-top: .5em;
+        padding-bottom: .5em;
+
+        p{
+            float: left;
+            line-height: 38px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        ul{
+            @include li-reset();
+            @include clearfix();
+
+            li {
+                float: right;
+                display: block;
+                margin-right: 5px;
+                a {
+                    display: block;
+                    padding: .5em 1em;
+                    background: $lightColor;
+                    color: #FFF;
+                    border-radius: 4px;
+                    @include transition(all, .3s, ease-out);
+                    &:hover,
+                    &:focus {
+                        background: darken($lightColor, 10);
+                    }
+                }
+            }
+        }
+    }
+    p {
+        line-height: 1.65em;
+    }
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
+        em {
+            font-style: normal;
+            color: $primaryColor;
+            padding: 0 .5em;
+        }
+    }
+    .footer_icon {
+        a {
+            display: inline-block;
+            vertical-align: top;
+            position:relative;
+             &:focus {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    box-shadow: 0px 0px 0px 1px $aHover inset;
+                    z-index: 99;
+                }
+            }
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+
+    @include screen('tablet') {
+        .footer_link {
+            padding: 1.5em 1em;
+            p{
+                float: none;
+                line-height: 1.4;
+                margin-bottom: 1em;
+            }
+            ul{
+                li{
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
