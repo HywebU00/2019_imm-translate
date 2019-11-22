@@ -2,14 +2,15 @@
 .header {
     position: relative;
     z-index: 99;
-    // background: #FFF;
+    background: $lightColor;
+
     // box-shadow: 0px 2px 5px RGBA(0, 0, 0, .3);
     @extend %clearfix;
     @include screen('mobile') {
         position: fixed;
         width: 100%;
         background: rgba(0, 0, 0, .75);
-        margin: 0 -16px;
+        // margin: 0 -16px;
     }
     // 虛擬底色 - navigation bg
     // &:before {
@@ -91,7 +92,7 @@
     }
     h1 {
         // float: left;
-        width: 260px;
+        width: 240px;
         position: absolute;
         // height: 75px;
         margin: 0;
@@ -102,7 +103,7 @@
         }
         img {
             display: block;
-            max-width: 260px;
+            max-width: 240px;
             max-height: 75px;
         }
         @include screen('mobile') {
@@ -130,8 +131,8 @@
         @extend %clearfix;
         overflow: hidden;
         width: 100%;
-        margin-top: .5em;
-        margin-bottom: .5em;
+        // margin-top: .5em;
+        // margin-bottom: .5em;
         box-sizing:border-box;
         ul {
             float: right;
@@ -152,6 +153,10 @@
                 padding: .5em;
                 text-decoration: none;
                 @include aSetting_nocolor(#fff);
+                &:hover, &:focus{
+                    background: rgba(0,0,0,.5);
+                    color: #fff;
+                }
             }
         }
         .language {
@@ -165,7 +170,27 @@
     @media screen and (max-width: 1100px) {
         h1 {
             position: static;
+            width: 100% !important;
         }
+    }
+}
+
+.mp .header{
+    background: transparent;
+
+    h1{
+        width: 260px;
+        img { max-width: 260px;}
+    }
+    // 導覽列
+    .navigation {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    @include screen('mobile') {
+        margin: 0 -16px;
+        background: rgba(0, 0, 0, .75);
     }
 }
 //search

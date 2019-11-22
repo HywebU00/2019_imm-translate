@@ -43,11 +43,13 @@
                     }
                 }
             }
-            &:hover {
+            &:hover, &:focus{
                 >a {
-                    color: $aHover;
+                    // color: $aHover;
+                    background: rgba(0,0,0,.5);
+                    color: #fff;
                     &:after {
-                        border: 2px solid $aHover;
+                        // border: 2px solid #fff;
                         border-bottom: none;
                         border-left: none;
                     }

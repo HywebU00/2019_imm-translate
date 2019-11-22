@@ -143,12 +143,17 @@ footer {
                 margin-bottom: 1em;
             }
             ul{
-                li{
-                    float: left;
-                }
+                li{ float: left; }
             }
         }
     }
+    @include screen('xs_mobile') {
+        .footer_link {
+            ul{
+                li{ float: none;}
+            }
+        }
+    } 
 }
 
 
