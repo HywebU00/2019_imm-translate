@@ -54,10 +54,12 @@ body {
         position: relative;
         .function{
             position: absolute;
-            right: 0;
-            top: 32px;
+            right: 12px;
+            top: 30px;
+            // border-left: dotted 1px #9e9e9e;
+            // padding-left: 1em;
         }
-        @include screen('mobile') {
+        @include screen('tablet') {
             .function{ position: static; }
         }
     }

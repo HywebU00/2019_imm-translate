@@ -172,6 +172,8 @@
             margin-right: .08em;
             label{ display: block; }
             select{ width: 100%; }
+
+            input[type="text"]{ width: 100%; }
         }
     }
 
@@ -297,7 +299,7 @@
     h3{
         font-size: 0;
         background: url(../images/basic/title-news.png) no-repeat;
-        width: 142px;
+        width: 150px;
         height: 85px;
     }
     ul{
