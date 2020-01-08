@@ -1,0 +1,42 @@
+.Key-search{
+	h3{
+		background: url('../images/basic/title-search-EN.png') no-repeat;
+	}
+}
+
+// 預約通譯服務
+.service{
+	h3{
+		background: url(../images/basic/title-service-EN.png) no-repeat;
+	}
+}
+
+// news
+.news{
+	h3{
+		background: url(../images/basic/title-news-EN.png) no-repeat;
+	}
+}
+
+// 通譯課程
+.course{
+	h3{
+		background: url(../images/basic/title-course-EN.png) no-repeat;
+	}
+}
+
+
+// 成為通譯
+.join{
+	[class^="col"] {
+		&:nth-child(2){
+            background: url('../images/basic/bg-join-male-1-mobile.png') 50% top no-repeat;
+        }
+	}
+
+	a{
+		p{
+			font-size: 1.33em;
+		}
+	}
+}
